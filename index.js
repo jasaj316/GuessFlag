@@ -60,7 +60,7 @@ const map = L.map('mapid').setView([0, 0], 3);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
-let marker = "";
+let marker = "g";
 function drawMap({ name, latlng: [latitude, longitude] }) {
   if (!guessbtn.classList.contains("answered")) {
     guessbtn.classList.add("answered");

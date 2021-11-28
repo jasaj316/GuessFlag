@@ -63,7 +63,9 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let guessMarker = "";
 let marker = "";
 function drawMap({ name, latlng: [latitude, longitude] }) {
-  map.removeLayer(guessMarker);
+  if (map.hasLayer(guessMarker)) {
+    map.removeLayer(guessMarker);
+  }
   if (name == "Guess") {
     guessMarker = L.circle([latitude, longitude], {
       color: 'red',

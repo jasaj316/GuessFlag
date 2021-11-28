@@ -64,6 +64,7 @@ let guessMarker = "";
 let marker = "";
 function drawMap({ name, latlng: [latitude, longitude] }) {
   if (name == "Guess") {
+    map.removeLayer(guessMarker);
     guessMarker = L.circle([latitude, longitude], {
       color: 'red',
       fillColor: '#f03',

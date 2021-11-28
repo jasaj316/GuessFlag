@@ -62,7 +62,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 let marker = "";
 function drawMap({ name, latlng: [latitude, longitude] }) {
-  if (name == "guess") {
+  if (name == "Guess") {
     marker = L.marker([latitude, longitude]).addTo(map)
       .bindPopup(name)
       .openPopup();
@@ -87,4 +87,4 @@ function drawMap({ name, latlng: [latitude, longitude] }) {
 }
 
 guessbtn.addEventListener('click', () => drawMap(country));
-map.addEventListener('click', (e) => drawMap({ name: "", latlng: [e.latlng.lat.toFixed(5), e.latlng.lng.toFixed(5)] }));
+map.addEventListener('click', (e) => drawMap({ name: "Guess", latlng: [e.latlng.lat.toFixed(5), e.latlng.lng.toFixed(5)] }));

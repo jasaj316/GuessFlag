@@ -74,7 +74,7 @@ function drawMap({ name, latlng: [latitude, longitude] }) {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 1,
-      radius: 1
+      radius: 1000
     }).addTo(map)
       .bindPopup(name)
       .openPopup();

@@ -81,6 +81,7 @@ function drawMap({ name, latlng: [latitude, longitude] }) {
     guessbtn.classList.remove("answered");
     guessbtn.innerHTML = "Answer";
     map.removeLayer(marker);
+    map.removeLayer(marker);
     refreshCountry();
     answer("r");
   }

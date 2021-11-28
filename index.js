@@ -81,3 +81,4 @@ function drawMap({ name, latlng: [latitude, longitude] }) {
 }
 
 guessbtn.addEventListener('click', () => drawMap(country));
+map.addEventListener('click', () => drawMap({ name: "guess", latlng: [latitude, longitude] }));

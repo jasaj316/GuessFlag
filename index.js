@@ -73,8 +73,8 @@ function drawMap({ name, latlng: [latitude, longitude] }) {
     guessMarker = L.circle([latitude, longitude], {
       color: 'red',
       fillColor: '#f03',
-      fillOpacity: 0.5,
-      radius: 50
+      fillOpacity: 1,
+      radius: 1
     }).addTo(map)
       .bindPopup(name)
       .openPopup();

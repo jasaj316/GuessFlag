@@ -48,12 +48,14 @@ function answer(type = "answer") {
     } else {
       lantext.innerHTML = `Language: ${country.language[0]}`;
     }
+    scoretext.innerHTML = `Score: ${360 - (Math.abs(guessMarker._latlng.lat - marker._latlng.lat) + Math.abs(guessMarker._latlng.lng - marker._latlng.lng))}`;
   } else if (type === "r") {
     answertext.innerHTML = ``;
     poptext.innerHTML = `Population:`;
     captext.innerHTML = `Capital:`;
     curtext.innerHTML = `Currency:`;
     lantext.innerHTML = `Language:`;
+    scoretext.innerHTML = `Score:`;
   }
 }
 const map = L.map('mapid').setView([0, 0], 3);
@@ -91,7 +93,6 @@ function drawMap({ name, latlng: [latitude, longitude] }) {
     guessbtn.classList.remove("answered");
     guessbtn.innerHTML = "Answer";
     map.removeLayer(marker);
-    map.removeLayer(guessMarker);
     refreshCountry();
     answer("r");
   }

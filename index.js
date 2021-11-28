@@ -60,10 +60,16 @@ const map = L.map('mapid').setView([0, 0], 3);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
+let guessMarker = "";
 let marker = "";
 function drawMap({ name, latlng: [latitude, longitude] }) {
   if (name == "Guess") {
-    marker = L.marker([latitude, longitude]).addTo(map)
+    guessMarker = L.circleL.circle([latitude, longitude], {
+      color: 'red',
+      fillColor: '#f03',
+      fillOpacity: 0.5,
+      radius: 50
+    }).addTo(map)
       .bindPopup(name)
       .openPopup();
     map.setView([latitude, longitude]);
@@ -81,7 +87,7 @@ function drawMap({ name, latlng: [latitude, longitude] }) {
     guessbtn.classList.remove("answered");
     guessbtn.innerHTML = "Answer";
     map.removeLayer(marker);
-    map.removeLayer(marker);
+    map.removeLayer(guessMarker);
     refreshCountry();
     answer("r");
   }

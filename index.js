@@ -48,7 +48,7 @@ function answer(type = "answer") {
     } else {
       lantext.innerHTML = `Language: ${country.language[0]}`;
     }
-    scoretext.innerHTML = `Score: ${360 - (Math.abs(guessMarker._latlng.lat - marker._latlng.lat) + Math.abs(guessMarker._latlng.lng - marker._latlng.lng))}`;
+    scoretext.innerHTML = `Score: ${Math.round(360 - (Math.abs(guessMarker._latlng.lat - marker._latlng.lat) + Math.abs(guessMarker._latlng.lng - marker._latlng.lng)))}`;
   } else if (type === "r") {
     answertext.innerHTML = ``;
     poptext.innerHTML = `Population:`;

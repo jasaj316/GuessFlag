@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color: #aad3df;
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#mapid {
+  height: 100vh;
+  width: 100%;
+}
+
+#flagimg>img {
+  margin: 1.3rem;
+  height: 22vmin;
+  width: auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 5vmin;
+}
+
+h2,
+h3 {
+  margin: 1vmin 0 0 0;
+  text-align: center;
+  font-size: 3vmin;
+}
+
+h3 {
+  font-size: 4vmin;
+}
+
+.flex {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.flex>section {
+  position: fixed;
+  width: 50vw;
+  right: 0;
+  background-image: linear-gradient(#aad3df, #f2efe9 200%);
+  border-left: 3px solid black;
+}
+
+section:first-of-type {
+  border-left: none;
+  border-right: 3px solid black;
+  position: fixed;
+  padding-top: 10vh;
+  width: 50vw;
+  height: 80vh;
+  padding-bottom: 10vh;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside,
+div {
+  margin: 0;
+}
+
+#guessbtn {
+  background-color: #eee;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+#guessbtn:hover {
+  background-color: #eee;
+  border-color: black;
+}
+
+p {
+  margin-top: 1vmin;
+  font-size: 2.5vmin;
+  border-bottom: solid 1px black;
+}
+
+/* Grid */
+aside {
+  margin: 0 auto 0 auto;
+  width: calc(25vw + 2rem);
+  display: grid;
+  grid-template:
+    "t t t t"
+    "a b b b"
+    "c d d d"
+    "e f f f"
+    "g h h h"
+    "s s s s";
+  grid-template-columns:
+    repeat(4, 1fr);
+}
+
+aside.hidden {
+  display: none;
+}
+
+.text {
+  text-align: left;
+  align-self: end;
+}
+
+.val {
+  text-align: right;
+}
+
+#answertext {
+  margin-top: 4vmin;
+  grid-area: t;
+  text-align: center;
+}
+
+#roundscore {
+  margin: 0;
+  grid-area: s;
+  text-align: center;
+  font-size: 3.5vmin;
+  border-bottom: none;
+}
+
+#captext {
+  grid-area: a;
+}
+
+#capval {
+
+  grid-area: b;
+}
+
+#poptext {
+  grid-area: c;
+}
+
+#popval {
+
+  grid-area: d;
+}
+
+#curtext {
+  grid-area: e;
+}
+
+#curval {
+
+  grid-area: f;
+}
+
+#lantext {
+  grid-area: g;
+}
+
+#lanval {
+
+  grid-area: h;
+}

@@ -8,87 +8,37 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin="" />
-  <style>
-    body {
-      background-color: #99bbcc;
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-    }
-
-    h1 {
-      margin-top: 60px;
-      font-size: 30px;
-    }
-
-    h2 {
-      text-shadow: 0px 0px 5px #fff;
-    }
-
-    .flex {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-    }
-
-    .flex>article {
-      width: 50vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #mapid {
-      height: 100vh;
-      width: 100%;
-    }
-
-    #flagimg>img {
-      max-height: 20vh;
-    }
-
-    #guessbtn {
-      background-color: #66ee22;
-      font-size: 20px;
-      margin: 20px;
-    }
-
-    hr {
-      width: 25vw;
-    }
-
-    article>p {
-      margin: 5px;
-      margin-left: 14vw;
-      align-self: flex-start;
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <section class="flex">
-    <article>
-      <h1>Guess the Flag</h1>
-      <div id="flagimg"></div>
-      <button id="guessbtn">Answer</button>
-      <h2 id="answertext"></h2>
-      <p id="captext">Capital:</p>
-      <hr />
-      <p id="poptext">Population:</p>
-      <hr />
-      <p id="curtext">Currency:</p>
-      <hr />
-      <p id="lantext">Language:</p>
-      <hr />
-      <p id="scoretext">Score:</p>
-      <hr />
-    </article>
-    <article>
+    <section>
+      <article>
+        <h1>Guess the Flag</h1>
+        <div id="flagimg"></div>
+        <button id="guessbtn">Answer</button>
+      </article>
+      <aside class="data hidden">
+        <h2 id="answertext"></h2>
+        <p class="text" id="captext"></p>
+        <p class="val" id="capval"></p>
+        <p class="text" id="poptext"></p>
+        <p class="val" id="popval"></p>
+        <p class="text" id="curtext"></p>
+        <p class="val" id="curval"></p>
+        <p class="text" id="lantext"></p>
+        <p class="val" id="lanval"></p>
+        <p class="text" id="roundscore"></p>
+      </aside>
+      <div>
+        <h3 id="totalscore">Total Score: 0</h3>
+      </div>
+    </section>
+    <section>
       <div id="mapid"></div>
-    </article>
+    </section>
   </section>
-  <!-- Make sure you put this AFTER Leaflet's CSS -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>

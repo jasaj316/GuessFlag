@@ -1,2 +1,3 @@
 # Guess the Flag
-https://loving-murdock-39583d.netlify.app/
+Guess what country each flag comes from!
+[https://jasaj316.github.io/GuessFlag/](https://jasaj316.github.io/GuessFlag/)

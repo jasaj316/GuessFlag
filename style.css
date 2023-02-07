@@ -16,7 +16,7 @@ body {
 }
 
 #flagimg>img {
-  margin: 4vmin;
+  margin: 3.5vmin;
   height: 22vmin;
   width: auto;
 }
@@ -134,13 +134,13 @@ aside.hidden {
 }
 
 #answertext {
-  margin: 3vmin 0 1vmin 0;
+  margin: 3.5vmin 0 1vmin 0;
   grid-area: t;
   text-align: center;
 }
 
 #roundscore {
-  margin: 0;
+  margin: 0 0 1vmin 0;
   grid-area: s;
   text-align: center;
   font-size: 3.5vmin;

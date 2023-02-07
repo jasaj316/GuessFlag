@@ -16,7 +16,7 @@ body {
 }
 
 #flagimg>img {
-  margin: 1.3rem;
+  margin: 5vmin;
   height: 22vmin;
   width: auto;
 }
@@ -28,7 +28,8 @@ h1 {
 }
 
 h2,
-h3 {
+h3,
+h4 {
   margin: 1vmin 0 0 0;
   text-align: center;
   font-size: 3vmin;
@@ -37,6 +38,14 @@ h3 {
 h3 {
   font-size: 4vmin;
 }
+
+h4 {
+  font-weight: normal;
+  font-size: 2.5vmin;
+  margin-top: 0.5vmin;
+  padding: 0 2vmin 0 2vmin
+}
+
 
 .flex {
   height: 100vh;
@@ -51,12 +60,10 @@ h3 {
   width: 50vw;
   right: 0;
   background-image: linear-gradient(#aad3df, #f2efe9 200%);
-  border-left: 3px solid black;
 }
 
 section:first-of-type {
   border-left: none;
-  border-right: 3px solid black;
   position: fixed;
   padding-top: 10vh;
   width: 50vw;
@@ -68,23 +75,22 @@ section:first-of-type {
   justify-content: space-evenly;
 }
 
+section:last-of-type {
+  border-left: 3px solid black;
+}
+
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-aside,
-div {
-  margin: 0;
-}
-
 #guessbtn {
   background-color: #eee;
-  border: 3px solid transparent;
+  border: 0 solid transparent;
   border-radius: 3px;
-  font-size: 1rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 4vmin;
+  padding: 2vmin;
 }
 
 #guessbtn:hover {

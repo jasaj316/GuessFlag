@@ -16,7 +16,7 @@ body {
 }
 
 #flagimg>img {
-  margin: 5vmin;
+  margin: 4vmin;
   height: 22vmin;
   width: auto;
 }
@@ -134,7 +134,7 @@ aside.hidden {
 }
 
 #answertext {
-  margin-top: 4vmin;
+  margin: 3vmin 0 1vmin 0;
   grid-area: t;
   text-align: center;
 }
